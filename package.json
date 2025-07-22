@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:firefox": "playwright test --config=playwright.config.ts --project=Firefox",
+    "test:webkit": "playwright test --config=playwright.config.ts --project=Webkit",
+    "test:all": "playwright test --config=playwright.config.ts --project=Webkit --project=Firefox --project=Chromium ",
+    "test:ui": "playwright test --config=playwright.config.ts --ui",
+    "test:e2e": "playwright test --config=playwright.config.ts --project=Chromium"
   },
   "author": "",
   "license": "ISC",
